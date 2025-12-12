@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <!-- Google Fonts - Load Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register</h1>
+
+      <div id="feedback-message"></div>
+      <!--Registration Form-->
+      <form id="registrationForm">
+        <!-- Full Name Field -->
+        <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" /> <!-- Added name attribute -->
+          <small></small>
+        </div>
+
+        <!-- Age Field -->
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age"/> <!-- Added age attribute -->
+          <small></small>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /> <!-- Added email attribute -->
+          <small></small>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" /> <!-- Added password attribute -->
+          <small></small>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" /> <!-- Added confirmPassword attribute -->
+          <small></small>
+        </div>
+
+        <!-- Submit Field-->
+        <button type="submit">Register Now</button> <!-- Changed input to button for better semantics -->
+      </form>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+/* 1. Background & Centering */
+* {
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+    135deg,
+    #a1c4fd,
+    #c2e9fb
+  ); /* Gradient background */
+  font-family: "poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* I just love poppins */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+/* 2. Form Container */
+.container {
+  background-color: rgba(255, 255, 255, 0.55); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  padding: 35px; 
+  width: 380px;
+}
+
+/* 3. Form Fields */
+.form-group {
+  margin-bottom: 18px; /* Spacing between fields */
+  position: relative; /* For positioning error messages */
+}
+
+.form-group label {
+  display: block; /* Block display for labels */
+  font-size: 14px;
+  margin-bottom: 6px; /* Spacing below labels */
+  color: #34495e; /* Dark text color */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid transparent; /* Default border */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent dark background */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  outline: none; /* Remove default outline */
+  transition: 0.3s; /* Smooth transition for focus */
+}
+
+/* The submit button */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background so it's not boring */
+  color: white; 
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: 0.3s ease; /* Smooth transition for hover */
+}
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
+  box-shadow: 0 8px 20px rgba(58, 123, 213, 0.4);
+}
+
+/* 4. Error Messages */
+.form-group.success input {
+  border-color: #2ecc71; /* Green border for success */
+}
+
+/* Error state */
+.form-group.error input {
+  border-color: #e74c3c; /* Red border for error */
+}
+
+/* Error message styling */
+.form-group small {
+  color: #e74c3c; /* Red text for error messages */
+  visibility: hidden; /* Hidden by default */
+  font-size: 12px;
+  margin-top: 5px;
+  display: block; /* Block display for proper spacing */
+  min-height: 18px; /* Prevents layout shift when error appears */
+}
+
+/* Show error message when in error state */
+.form-group.error small {
+  visibility: visible;
+}
+
+/* 5 . Success Message */
+#feedback-message {
+  margin-bottom: 20px;
+  padding: 0; /* Hidden when empty */
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* For JavaScript to set success message style */
+.success-message {
+  padding: 15px !important;
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  border: 1px solid #c3e6cb; /* Green border */
+}
+
+/* 6. Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Full width on small screens */
+    padding: 20px; /* Reduced padding */
+  }
+}
+
+h1 {
+  font-size: 1.5rem; /* Adjusted font size for smaller screens */
+}
